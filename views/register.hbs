@@ -1,0 +1,108 @@
+<div class="register-section">
+    <form method="POST">
+        <legend>Join Kenzy's Blog</legend>
+        <div class="row">
+            <div class="section">
+                <a href="/auth/google" class="btn">
+                    <div class="google"></div>Sign Up with Goggle
+                </a>
+            </div>
+        </div>
+        <div class="row flex">
+            <div class="divider"></div>
+            OR
+            <div class="divider"></div>
+        </div>
+        <div class="row">
+            {{#if errors.username}}
+            {{#each errors.username}}
+            <div class="input-field col s12">
+                <input type="text" name="username" id="username" class="error">
+                <label for="username">Username</label>
+                <span class="helper-text red-text text-darken-3">{{this}}</span>
+            </div>
+            {{/each}}
+            {{else}}
+            <div class="input-field col s12">
+                <input type="text" name="username" id="username">
+                <label for="username">Username</label>
+            </div>
+            {{/if}}
+        </div>
+        <div class="row">
+            {{#if errors.fullname}}
+            {{#each errors.fullname}}
+            <div class="input-field col s12">
+                <input type="text" name="fullname" id="fullname" class="error">
+                <label for="fullname">Fullname</label>
+                <span class="helper-text red-text text-darken-3">{{this}}</span>
+            </div>
+            {{/each}}
+            {{else}}
+            <div class="input-field col s12">
+                <input type="text" name="fullname" id="fullname">
+                <label for="fullname">Fullname</label>
+            </div>
+            {{/if}}
+        </div>
+        <div class="row">
+            {{#if errors.email}}
+            {{#each errors.email}}
+            <div class="input-field col s12">
+                <input type="email" name="email" id="email" class="error">
+                <label for="email">Email</label>
+                <span class="helper-text red-text text-darken-3">{{this}}</span>
+            </div>
+            {{/each}}
+            {{else}}
+            <div class="input-field col s12">
+                <input type="email" name="email" id="email">
+                <label for="email">Email</label>
+            </div>
+            {{/if}}
+        </div>
+        <div class="row">
+            {{#if errors.password}}
+            {{#each errors.password}}
+            <div class="input-field col s12">
+                <input type="password" name="password" id="password" class="error">
+                <label for="password">Password</label>
+                <span class="helper-text red-text text-darken-3">{{this}}</span>
+            </div>
+            {{/each}}
+            {{else}}
+            <div class="input-field col s12">
+                <input type="password" name="password" id="password">
+                <label for="password">Password</label>
+            </div>
+            {{/if}}
+        </div>
+        <div class="row">
+            {{#if errors.password2}}
+            {{#each errors.password2}}
+            <div class="input-field col s12">
+                <input type="password" name="password2" id="password2" class="error">
+                <label for="password2">Confirm Password</label>
+                <span class="helper-text red-text text-darken-3">{{this}}</span>
+            </div>
+            {{/each}}
+            {{else}}
+            <div class="input-field col s12">
+                <input type="password" name="password2" id="password2">
+                <label for="password2">Confirm Password</label>
+            </div>
+            {{/if}}
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <button type="submit" class="btn register-btn waves-effect waves-light">Sign Up</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field sign-in-group col s12">
+                <span>Already Have An Account?</span><a href="/auth/login" class="sign-in">Sign In</a>
+            </div>
+        </div>
+
+    </form>
+</div>
